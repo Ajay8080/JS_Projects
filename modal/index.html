@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Click BoX Modal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            text-align: center;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #openModalBtn{
+            font-size: 50px;
+            border-radius: 30px;
+            background: radial-gradient(circle,#fd1d1d,#97359b,#c52a62);
+        }
+    </style>
+   
+</head>
+<body>
+
+
+<button id="openModalBtn" >Click Here</button>
+
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="container">
+        
+        <div class="number-display">
+            <span id="number">0</span>
+            <span id="number-type">even</span>
+        </div>
+        <div id="message"></div>
+        <div class="buttons">
+            <button id="increment">+</button>
+            <button id="decrement">-</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
