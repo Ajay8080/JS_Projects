@@ -1,0 +1,178 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('world.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100S;
+    transition: background-color 0.3s ease;
+}
+
+header {
+    background-color: white; 
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items:end;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    color: black    ;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: 20px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: flex-end;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+
+}
+
+.mode-label {
+    font-size: 14px;
+    color: #333;
+    margin-left: 10px;
+    user-select: none;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#country-list {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+.country {
+    background-color: #fffffddd; 
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(33% - 40px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.country:hover {
+    background-color: white; 
+}
+
+.country img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.country h2 {
+    margin: 10px 0 5px 0;
+    font-size: 24px;
+    color: rgb(18, 0, 0);
+    text-align: center;
+}
+
+.country p {
+    margin: 0 0 10px 0;
+    color: #777;
+    text-align: center;
+}
+
+.dark-mode body {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode header {
+    background-color: #222;
+}
+
+.dark-mode .country {
+    background-color: #333;
+    
+    color: rgb(255, 255, 255);
+}
+
+.dark-mode .country:hover {
+    background-color: #444;
+}
+
+.dark-mode .dark{
+    color: white    ;
+}
+
+.dark-mode h2{
+    color: white;
+}
+
+.dark-mode p{
+    color: white;
+}
+
+#myvid{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
